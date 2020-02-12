@@ -1,0 +1,122 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+.page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  font-family: system-ui;
+}
+
+.menu-wrap {
+  display: flex;
+}
+
+.nav {
+  height: 80px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+  position: fixed;
+}
+
+.article-menu-item {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: #4facfe;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.article-menu-item a {
+  color: white;
+  font-size: 20px;
+}
+
+.details {
+  font-size: 20px;
+}
+
+
+a {
+  color: #4facfe;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4facfe;
+}
+
+.ratings {
+  margin-top: 10px;
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 35px;
+}
+
+.ratings i {
+  color: #4facfe;
+}
+
+.background {
+  width: 50%;
+}
+
+.content {
+  margin-bottom: 50px;
+}
+
+.simple_form {
+  width: 50%;
+}
+
+.button-wrap {
+  display: flex;
+  align-items: center;
+}
+
+
+h1 {
+  margin-bottom: 40px;
+}
+
+.button {
+  background-color: #4facfe;
+  border-radius: 35px;
+  font-size: 18px;
+  padding: 10px 15px;
+  margin: 20px 0px;
+  text-align: center;
+  flex-grow: 1;
+  color: white;
+  border: none;
+}
+
+.button a {
+  color: white;
+}

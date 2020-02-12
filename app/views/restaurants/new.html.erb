@@ -1,0 +1,27 @@
+<h1>New Restaurant</h1>
+
+
+  <%= simple_form_for(@restaurant) do |f| %>
+
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category %>
+
+    <div class="button-wrap">
+
+       <div class="article-menu-item">
+        <%= link_to restaurants_path do %>
+          <i class="fas fa-arrow-left"></i>
+        <% end %>
+      </div>
+
+      <%= f.submit class: 'button' %>
+
+    </div>
+
+
+  <% end %>
+
+  <div class="article-menu">
+

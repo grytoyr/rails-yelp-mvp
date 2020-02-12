@@ -1,0 +1,54 @@
+<div class="background">
+  <h1><%= @restaurant.name %></h1>
+
+  <div class="content">
+    <div class="details">Address: <%= @restaurant.address %></div>
+    <div class="details">Phone: <%= @restaurant.phone_number %></div>
+    <div class="details">Cusine: <%= @restaurant.category %></div>
+  </div>
+
+  <h4><%= @restaurant.reviews.length %> reviews</h4>
+    <% @restaurant.reviews.each do |review| %>
+    <div class="ratings">
+      <% if review.rating < 2 %>
+        <i class="fas fa-star"></i>
+      <% elsif review.rating == 2 %>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      <% elsif review.rating == 3 %>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      <% elsif review.rating == 4 %>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      <% else %>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      <% end %>
+      <br>
+
+      <%= review.content %>
+    </div>
+    <% end %>
+
+
+  <div class="button-wrap">
+    <div class="article-menu-item">
+      <%= link_to restaurants_path do %>
+        <i class="fas fa-arrow-left"></i>
+      <% end %>
+    </div>
+    <div class="button">
+      <%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %>
+    </div>
+  </div>
+
+
+
+</div>
